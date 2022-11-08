@@ -16,3 +16,26 @@ const students = [
   "Luna Lovegood",
   "Gregory Goyle",
 ];
+
+// Task 6a
+const sort = broomCupboard.sort(function(b,a){
+  return b-a
+})
+console.log(sort)
+
+// Task 6b
+const sort2 = potions.sort(function(b,a){
+  return a.shelf-b.shelf
+})
+console.log(sort2)
+
+//Task 6c
+function alphabetizer(names) {
+  return names.map(function(name) {
+    var full = name.split(" "),
+      last = full.pop();
+    return last + " " + full.join(" ");
+  }).sort();
+}
+
+console.log(alphabetizer(students));
